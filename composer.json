@@ -1,0 +1,148 @@
+{
+    "name": "dom-digital-online-media/living-spaces-composer-template",
+    "description": "Project template for Drupal 9 projects with living_spaces distribution.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/lenient"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dom-digital-online-media/dom_faq",
+                "type": "drupal-module",
+                "version": "1.4",
+                "dist": {
+                    "url": "https://github.com/dom-digital-online-media/dom_faq/archive/v1.4.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "valve/fingerprintjs2",
+                "type": "drupal-library",
+                "version": "2.1.0",
+                "dist": {
+                    "url": "https://github.com/fingerprintjs/fingerprintjs/archive/2.1.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fullcalendar/fullcalendar",
+                "version": "4.4.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/fullcalendar/fullcalendar/releases/download/v4.4.0/fullcalendar-4.4.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dom-digital-online-media/dom_bootstrap",
+                "type": "drupal-module",
+                "version": "1.1",
+                "dist": {
+                    "url": "https://github.com/dom-digital-online-media/dom_bootstrap/archive/1.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dom-digital-online-media/dom_field_extra",
+                "type": "drupal-module",
+                "version": "1.0",
+                "dist": {
+                    "url": "https://github.com/dom-digital-online-media/dom_field_extra/archive/1.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dom-digital-online-media/dom_paragraphs_extra",
+                "type": "drupal-module",
+                "version": "1.1",
+                "dist": {
+                    "url": "https://github.com/dom-digital-online-media/dom_paragraphs_extra/archive/1.1.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "dom-digital-online-media/living_spaces": "^1.0@alpha",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/console": "~1.0",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
+        "drush/drush": "^10.0"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^9.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/sites/default/default.services.yml": false,
+                "[web-root]/sites/default/default.settings.php": false
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "enable-patching": true
+    }
+}
