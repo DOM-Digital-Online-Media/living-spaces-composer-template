@@ -93,6 +93,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "dom-digital-online-media/living_spaces": "^1.0@alpha",
         "drupal/backup_migrate": "^5.0",
         "drupal/console": "~1.0",
